@@ -5,14 +5,15 @@ export default function Global({ global, color }) {
     const colorClass = color.toLowerCase();
 
     return (
-    <div className={'white'} style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
+    <div className={'white leaf-holder'}>
         <div className={`leaf ${colorClass}`}>
             <div
             className="circle"
             style={{
+                marginRight: 'auto',
                 width: "1rem",
                 height: "1rem",
-                backgroundColor: "white",
+                backgroundColor: "var(--white)",
                 color: `var(--${colorClass})` // use the CSS variable
             }}
             >

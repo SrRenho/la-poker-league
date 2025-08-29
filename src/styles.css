@@ -110,3 +110,14 @@
   align-items: center;
     min-width: 0;
 }
+
+.leaf-holder {
+  display: flex;
+  justify-content: center;   /* center children horizontally */
+  width: 100%;               /* fill horizontal space */
+  padding: .3rem .3rem;           /* space between borders and children */
+}
+
+.leaf-holder > * {
+  flex: 1;                   /* fill most available space */
+}

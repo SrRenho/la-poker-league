@@ -4,6 +4,7 @@ import Games from "./Games";
 import Amount from "./Amount";
 import Global from "./Global";
 import PlayerCell from "./PlayerCell";
+import Ultimas from "./Ultimas";
 
 export default function PlayerRow({
   rankMovement,
@@ -25,7 +26,7 @@ export default function PlayerRow({
         <span/>
         <div className="cell"><Global global={global} color={color}/></div>
         <div className="cell"><Games games={games} color={color}/></div>
-        <div className="cell">{history.length > 0 ? history.join(", ") : ""}</div>
+        <Ultimas ultimas={history} color={color}/>
     </div>
     );
 }

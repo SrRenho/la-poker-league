@@ -8,12 +8,12 @@ function AppContent({ rows, metadata }) {
   if (!currentNight) return <div>Loading...</div>;
 
   return (
-    <div>
-      <Leaderboard night={currentNight} metadata={metadata} />
-      <div style={{ marginTop: "1rem" }}>
-        {hasPrev && <button onClick={goPrev}>Previous</button>}
-        {hasNext && <button onClick={goNext} style={{ marginLeft: "1rem" }}>Next</button>}
-      </div>
+    <div style={{ backgroundColor: "#201b1bff", minHeight: "100vh" }}>
+        <Leaderboard night={currentNight} metadata={metadata} />
+        <div style={{ marginTop: "1rem" }}>
+            {hasPrev && <button onClick={goPrev}>Previous</button>}
+            {hasNext && <button onClick={goNext} style={{ marginLeft: "1rem" }}>Next</button>}
+        </div>
     </div>
   );
 }

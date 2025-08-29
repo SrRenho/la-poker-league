@@ -9,7 +9,7 @@ export default function Leaderboard({ night, metadata }) {
 
   return (
     <div>
-      <h2>NOCHE #{nightNumber}</h2>
+      <h2 style={{ color: "white" }}>NOCHE #{nightNumber}</h2>
       <div className="leaderboard">
         {players.map(r => (
           <PlayerRow

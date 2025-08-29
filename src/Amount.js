@@ -4,7 +4,7 @@ export default function Amount({ amount, color, absentStreak }) {
     const colorClass = color.toLowerCase();
 
     return (
-    <div className={colorClass}>
+    <div className={`${colorClass} leaf-holder`}>
         <div className="leaf white">
             {amount !== ""
                 ? <PlayedAmount amount={amount}/>
@@ -28,7 +28,7 @@ function PlayedAmount({ amount }) {
 
   return (
     <>
-      <div className={`circle ${circleColor}`} style={{ width: "1rem", height: "1rem" }}>
+      <div className={`circle ${circleColor}`} style={{ marginRight: 'auto', width: "1rem", height: "1rem" }}>
         {sign}
       </div>
         ${Math.abs(amount)}

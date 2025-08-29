@@ -4,5 +4,5 @@ export default function Games({ games, color }) {
   games = games || 0;
   const colorClass = color.toLowerCase();
 
-  return <span className={`leaf ${colorClass}`}>{games}</span>;
+  return <span className={`leaf ${colorClass}`}>{String(games).padStart(2, "0")}</span>;
 }
