@@ -1,6 +1,6 @@
 import PlayerRow from "./PlayerRow";
 
-export default function Leaderboard({ night }) {
+export default function Leaderboard({ night, metadata }) {
   if (!night) return null;
 
   const nightNumber = night.number;
@@ -11,17 +11,12 @@ export default function Leaderboard({ night }) {
       <h2>NOCHE #{nightNumber}</h2>
       <table>
         <tbody>
-          {players.map(({ rankMovement, player, amount, absentStreak, global, games, rank, history }) => (
+          {players.map(r => (
             <PlayerRow
-              rankMovement={rankMovement}
-              rank={rank}
-              key={player}
-              name={player}
-              amount={amount}
-              absentStreak={absentStreak}
-              global={global}
-              games={games}
-              history={history}
+              key={r.player}
+              {...r}
+              color={metadata.color[r.player]}
+              animal={metadata.animal[r.player]}
             />
           ))}
         </tbody>

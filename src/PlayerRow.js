@@ -1,6 +1,19 @@
-export default function PlayerRow({ rankMovement, rank, name, amount, absentStreak, global, games, history }) {
-  return (
+export default function PlayerRow({
+  rankMovement,
+  rank,
+  name,
+  amount,
+  absentStreak,
+  global,
+  games,
+  history,
+  color,
+  animal
+}) {
+
+    return (
     <tr>
+        <td>{color} {animal}</td>
         <td>
         {rankMovement === 0
             ? "="
