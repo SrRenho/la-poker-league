@@ -1,4 +1,5 @@
 import PlayerRow from "./PlayerRow";
+import "./styles.css";
 
 export default function Leaderboard({ night, metadata }) {
   if (!night) return null;
@@ -9,18 +10,16 @@ export default function Leaderboard({ night, metadata }) {
   return (
     <div>
       <h2>NOCHE #{nightNumber}</h2>
-      <table>
-        <tbody>
-          {players.map(r => (
-            <PlayerRow
-              key={r.player}
-              {...r}
-              color={metadata.color[r.player]}
-              animal={metadata.animal[r.player]}
-            />
-          ))}
-        </tbody>
-      </table>
+      <div className="leaderboard">
+        {players.map(r => (
+          <PlayerRow
+            key={r.player}
+            {...r}
+            color={metadata.color[r.player]}
+            animal={metadata.animal[r.player]}
+          />
+        ))}
+      </div>
     </div>
   );
 }

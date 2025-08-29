@@ -13,8 +13,12 @@ export function useNightNavigation(nights) {
     if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
   };
 
+  const goLast = () => {
+    if (nights.length > 0) setCurrentIndex(nights.length - 1);
+  };
+
   const hasNext = currentIndex < nights.length - 1;
   const hasPrev = currentIndex > 0;
 
-  return { currentNight, goNext, goPrev, hasNext, hasPrev };
+  return { currentNight, goNext, goPrev, hasNext, hasPrev, goLast };
 }

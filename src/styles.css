@@ -1,0 +1,112 @@
+:root {
+    --white: #f1faee;
+    --gold: #ffb703;
+    --silver: #a8dadc;
+    --bronze: #e76f51;
+    --red: #e63946;
+    --maroon: #800000;
+    --blue: #457b9d;
+    --black: #111111;
+    --brown: #a0522d;
+    --pink: #ffb6c1;
+    --purple: #800080;
+    --green: #2a9d8f;
+    --yellow: var(--gold);
+}
+
+.white  { background-color: var(--white); color: var(--black);}
+.gold   { background-color: var(--gold); border: 0.1em solid var(--white); color: var(--white);}
+.silver { background-color: var(--silver); border: 0.1em solid var(--black); color: var(--black);}
+.bronze { background-color: var(--bronze); border: 0.1em solid var(--white); color: var(--white);}
+.red    { background-color: var(--red); color: var(--white);}
+.maroon { background-color: var(--maroon); color: var(--white);}
+.blue   { background-color: var(--blue); color: var(--white);}
+.black  { background-color: var(--black); border: 0.1em solid var(--white); color: var(--white);}
+.brown  { background-color: var(--brown); color: var(--white);}
+.pink   { background-color: var(--pink); color: var(--white);}
+.purple { background-color: var(--purple); color: var(--white);}
+.green  { background-color: var(--green); color: var(--white);}
+.yellow   { background-color: var(--yellow); color: var(--white);}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.8rem solid var(--triangle-color, var(--green));
+}
+
+.triangleUp {
+  --triangle-color: var(--green);
+}
+
+.triangleDown {
+  --triangle-color: var(--red);
+  transform: rotate(180deg);
+}
+
+.leaf {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  min-height: 2rem;
+  border-top-left-radius: 1em 1em;
+  border-bottom-right-radius: 1em 1em;
+  padding: 0.25rem 0.5rem;
+}
+
+.rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem; /* adjust as needed */
+}
+
+.leaderboard {
+    margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* spacing between rows */
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 9fr 3fr .5fr 3fr 1fr 2fr;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+.cell {
+  display: flex;             /* cell behaves like a table cell */
+  align-items: center;       /* vertically center content */
+  padding: 0 0.5rem;         /* optional spacing */
+  justify-content: center;
+
+  flex: 0 0 auto;            /* DON'T stretch; shrink-to-fit */
+}
+
+.player-cell {
+    width: 100%;
+  border-top-left-radius: 2em 2em;
+  display: flex;
+}
+
+.rank-block {
+    margin-left: -8%;
+  display: flex;
+  align-items: center;
+    min-width: 0;
+}

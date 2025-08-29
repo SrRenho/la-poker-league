@@ -1,7 +1,14 @@
+import "./styles.css";
+
+import Games from "./Games";
+import Amount from "./Amount";
+import Global from "./Global";
+import PlayerCell from "./PlayerCell";
+
 export default function PlayerRow({
   rankMovement,
   rank,
-  name,
+  player: name,
   amount,
   absentStreak,
   global,
@@ -12,26 +19,13 @@ export default function PlayerRow({
 }) {
 
     return (
-    <tr>
-        <td>{color} {animal}</td>
-        <td>
-        {rankMovement === 0
-            ? "="
-            : rankMovement > 0
-            ? "^".repeat(rankMovement)
-            : "v".repeat(-rankMovement)}
-        </td>
-        <td>#{rank}</td>
-        <td>{name}</td>
-        <td>
-        {amount !== "" 
-            ? `$${amount}`
-            : `AUSENTE${absentStreak > 1 ? ` x${absentStreak}` : ""}`
-        }
-        </td>
-        <td>${global || 0}</td>
-        <td>{games || 0}</td>
-        <td>{history.length > 0 ? history.join(", ") : ""}</td>
-    </tr>
-  );
+    <div className="row">
+        <PlayerCell rankMovement={rankMovement} rank={rank} name={name} color={color} animal={animal}/>
+        <Amount amount={amount} color={color} absentStreak={absentStreak}/>
+        <span/>
+        <div className="cell"><Global global={global} color={color}/></div>
+        <div className="cell"><Games games={games} color={color}/></div>
+        <div className="cell">{history.length > 0 ? history.join(", ") : ""}</div>
+    </div>
+    );
 }

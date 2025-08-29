@@ -2,7 +2,6 @@ import Leaderboard from "./Leaderboard";
 import { useNightNavigation } from "./useNightNavigation";
 
 function AppContent({ rows, metadata }) {
-  console.log({ rows, metadata });
   const nights = processNights(rows);
   const { currentNight, goNext, goPrev, hasNext, hasPrev } = useNightNavigation(nights);
 
