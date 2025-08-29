@@ -28,10 +28,12 @@ function PlayedAmount({ amount }) {
 
   return (
     <>
-      <div className={`circle ${circleColor}`} style={{ marginRight: 'auto', width: "1rem", height: "1rem" }}>
+      <div className={`circle no-italic ${circleColor}`} style={{ marginRight: 'auto'}}>
         {sign}
       </div>
-        ${Math.abs(amount)}
+      <span className="money">
+        ${Math.abs(amount).toLocaleString('de-DE')}
+      </span>
     </>
   );
 }
@@ -39,8 +41,8 @@ function PlayedAmount({ amount }) {
 function AbsentAmount({absentStreak}){
 
     return(
-        <>
+        <div className="no-bold smaller">
             {`AUSENTE${absentStreak > 1 ? ` x${absentStreak}` : ""}`}
-        </>
+        </div>
     )
 }

@@ -8,18 +8,18 @@ export default function Global({ global, color }) {
     <div className={'white leaf-holder'}>
         <div className={`leaf ${colorClass}`}>
             <div
-            className="circle"
+            className="circle no-italic"
             style={{
                 marginRight: 'auto',
-                width: "1rem",
-                height: "1rem",
                 backgroundColor: "var(--white)",
                 color: `var(--${colorClass})` // use the CSS variable
             }}
             >
             {global >= 0 ? "+" : "-"}
             </div>
-            ${Math.abs(global)}
+            <span className="money">
+                ${Math.abs(global).toLocaleString('de-DE')}
+            </span>
         </div>
     </div>
     );

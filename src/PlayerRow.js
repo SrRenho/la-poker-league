@@ -24,8 +24,8 @@ export default function PlayerRow({
         <PlayerCell rankMovement={rankMovement} rank={rank} name={name} color={color} animal={animal}/>
         <Amount amount={amount} color={color} absentStreak={absentStreak}/>
         <span/>
-        <div className="cell"><Global global={global} color={color}/></div>
-        <div className="cell"><Games games={games} color={color}/></div>
+        <Global global={global} color={color}/>
+        <span className="cell"><Games games={games} color={color}/></span>
         <Ultimas ultimas={history} color={color}/>
     </div>
     );

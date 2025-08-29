@@ -8,9 +8,15 @@ export default function Leaderboard({ night, metadata }) {
   const players = [...night.records].sort((a, b) => a.rank - b.rank); // ascending rank
 
   return (
-    <div>
-      <h2 style={{ color: "white" }}>NOCHE #{nightNumber}</h2>
       <div className="leaderboard">
+        <div className="row header smaller">
+          <span/>
+          <span style={{fontStyle: 'italic'}}>Noche #{nightNumber}</span>
+          <span/>
+          <span>GLOBAL</span>
+          <span>GAMES</span>
+          <span>ÚLTIMAS</span>
+        </div>
         {players.map(r => (
           <PlayerRow
             key={r.player}
@@ -20,6 +26,5 @@ export default function Leaderboard({ night, metadata }) {
           />
         ))}
       </div>
-    </div>
   );
 }

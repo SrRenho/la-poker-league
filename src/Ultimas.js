@@ -8,16 +8,12 @@ export default function Ultimas({ ultimas, color }) {
     <span className={`leaf ${colorClass}`}>
       {paddedUltimas.map((u, i) => (
         <span
-        className="circle"
+        className="circle no-italic"
         style={{
-            width: "1rem",
-            height: "1rem",
             backgroundColor: "var(--white)",
             color: `var(--${colorClass})`,
             display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            margin: "0 0.5rem",
+            margin: "0 0.1rem",
         }}
         key={i}>
             {u}

@@ -12,8 +12,8 @@ export default function PlayerCell({ rankMovement, rank, name, color, animal }) 
             <RankMovement rankMovement={rankMovement} />
             <Rank rank={rank} />
         </span>
-        <span>{color} {animal}</span>
-        <span style={{ marginLeft: 'auto' }}>{name}</span>
+        <span className ="leaf" style={{marginLeft: "1rem", width: "42.5%", backgroundImage: "url('logo192.png')", backgroundSize: "contain"}}/>
+        <span style={{ marginLeft: 'auto', marginRight: "1rem" }}>{name}</span>
     </div>
     )
 }
