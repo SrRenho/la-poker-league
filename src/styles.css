@@ -20,18 +20,19 @@ body {
 }
 
 :root {
-    --white: #f1faee;
-    --gold: #ffb703;
-    --silver: #a8dadc;
-    --bronze: #e76f51;
-    --red: #e63946;
-    --maroon: #800000;
-    --blue: #457b9d;
-    --black: #111111;
-    --brown: #a0522d;
-    --pink: #ffb6c1;
-    --purple: #800080;
-    --green: #2a9d8f;
+    --white: #eeefdf;
+    --gold: #ffaa00;
+    --silver: #d0e4ea;
+    --bronze: #d15d2f;
+    --red: #d12f2f;
+    --evil-red: #ff2e3a;
+    --maroon: #6d1b34;
+    --blue: #1e67d3;
+    --black: #191919;
+    --brown: #a56028;
+    --pink: #f275da;
+    --purple: #700fbc;
+    --green: #2fb264;
     --yellow: var(--gold);
 }
 
@@ -40,6 +41,7 @@ body {
 .silver { background-color: var(--silver); border: 0.1rem solid var(--black); color: var(--black);}
 .bronze { background-color: var(--bronze); border: 0.1rem solid var(--white); color: var(--white);}
 .red    { background-color: var(--red); color: var(--white);}
+.evil-red { background-color: var(--evil-red); color: var(--white);}
 .maroon { background-color: var(--maroon); color: var(--white);}
 .blue   { background-color: var(--blue); color: var(--white);}
 .black  { background-color: var(--black); border: 0.1rem solid var(--white); color: var(--white);}

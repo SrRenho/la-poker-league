@@ -22,7 +22,7 @@ function PlayedAmount({ amount }) {
     circleColor = "green";
     sign = "+";
   } else if (amount < 0) {
-    circleColor = "red";
+    circleColor = "evil-red";
     sign = "-";
   }
 
