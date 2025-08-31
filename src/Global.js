@@ -1,27 +1,38 @@
 import './styles.css';
-import Hoverable from './Hoverable';
+import { useEffect } from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import Hoverable from "./Hoverable";
 
-export default function Global({ global, color }) {
-    global = global || 0;
-    const colorClass = color.toLowerCase();
+export default function Global({ global = 0, color }) {
+  const colorClass = color.toLowerCase();
 
-    return (
-    <Hoverable className={'white leaf-holder'}>
-        <div className={`leaf ${colorClass}`}>
-            <div
-            className="circle no-italic"
-            style={{
-                marginRight: 'auto',
-                backgroundColor: "var(--white)",
-                color: `var(--${colorClass})` // use the CSS variable
-            }}
-            >
-            {global >= 0 ? "+" : "-"}
-            </div>
-            <span className="money">
-                ${Math.abs(global).toLocaleString('de-DE')}
-            </span>
+  const value = useMotionValue(global);
+  const spring = useSpring(value, { stiffness: 100, damping: 20 });
+
+  // Map the spring value to formatted string
+  const formatted = useTransform(spring, (v) => `$${Math.abs(Math.round(v)).toLocaleString("de-DE")}`);
+
+  useEffect(() => {
+    value.set(global);
+  }, [global]);
+
+  return (
+    <Hoverable className="white leaf-holder">
+      <div className={`leaf ${colorClass}`}>
+        <div
+          className="circle no-italic"
+          style={{
+            marginRight: "auto",
+            backgroundColor: "var(--white)",
+            color: `var(--${colorClass})`,
+          }}
+        >
+          {global >= 0 ? "+" : "-"}
         </div>
+        <motion.span className="money" style={{ display: "inline-block" }}>
+          {formatted}
+        </motion.span>
+      </div>
     </Hoverable>
-    );
+  );
 }
