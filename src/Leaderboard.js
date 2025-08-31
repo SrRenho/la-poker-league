@@ -1,5 +1,6 @@
 import PlayerRow from "./PlayerRow";
 import "./styles.css";
+import AnimatedNight from "./AnimatedNight.js";
 import { motion } from "framer-motion";
 
 export default function Leaderboard({ night, metadata }) {
@@ -10,7 +11,9 @@ export default function Leaderboard({ night, metadata }) {
     <div className="leaderboard">
       <div className="row header smaller">
         <span />
-        <span style={{ fontStyle: "italic" }}>Noche #{nightNumber}</span>
+        <span style={{ fontStyle: "italic" }}>
+          Noche{" "}<AnimatedNight nightNumber={nightNumber}/>
+        </span>
         <span />
         <span>GLOBAL</span>
         <span>GAMES</span>
