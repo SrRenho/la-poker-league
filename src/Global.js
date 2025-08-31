@@ -1,11 +1,12 @@
 import './styles.css';
+import Hoverable from './Hoverable';
 
 export default function Global({ global, color }) {
     global = global || 0;
     const colorClass = color.toLowerCase();
 
     return (
-    <div className={'white leaf-holder'}>
+    <Hoverable className={'white leaf-holder'}>
         <div className={`leaf ${colorClass}`}>
             <div
             className="circle no-italic"
@@ -21,6 +22,6 @@ export default function Global({ global, color }) {
                 ${Math.abs(global).toLocaleString('de-DE')}
             </span>
         </div>
-    </div>
+    </Hoverable>
     );
 }

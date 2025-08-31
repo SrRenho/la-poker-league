@@ -110,6 +110,10 @@ body {
   
 }
 
+.leaderboard .row:first-child {
+  border-bottom: 1px solid var(--white); /* or whatever style you want */
+}
+
 .row {
   display: grid;
   grid-template-columns: 6fr 2.75fr .5fr 2.75fr 1fr 1.8fr;

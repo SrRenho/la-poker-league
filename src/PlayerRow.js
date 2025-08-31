@@ -1,5 +1,5 @@
 import "./styles.css";
-
+import Hoverable from "./Hoverable";
 import Games from "./Games";
 import Amount from "./Amount";
 import Global from "./Global";
@@ -20,13 +20,13 @@ export default function PlayerRow({
 }) {
 
     return (
-    <div className="row">
+      <Hoverable className="row">
         <PlayerCell rankMovement={rankMovement} rank={rank} name={name} color={color} animal={animal}/>
         <Amount amount={amount} color={color} absentStreak={absentStreak}/>
         <span/>
         <Global global={global} color={color}/>
         <span style={{marginLeft: "1rem"}}><Games games={games} color={color}/></span>
         <Ultimas ultimas={history} color={color}/>
-    </div>
+      </Hoverable>
     );
 }

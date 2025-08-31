@@ -1,16 +1,18 @@
 import './styles.css';
+import Hoverable from './Hoverable';
 
 export default function Amount({ amount, color, absentStreak }) {
+
     const colorClass = color.toLowerCase();
 
     return (
-    <div className={`${colorClass} leaf-holder`}>
+    <Hoverable className={`${colorClass} leaf-holder`}>
         <div className="leaf white">
             {amount !== ""
                 ? <PlayedAmount amount={amount}/>
                 : <AbsentAmount absentStreak={absentStreak}/>}
         </div>
-    </div>
+    </Hoverable>
     );
 }
 
