@@ -11,9 +11,9 @@ export default function Rank({ rank }) {
   }, [rank]);
 
   const rankClass =
-    rank === 1 ? "gold" :
-    rank === 2 ? "silver" :
-    rank === 3 ? "bronze" :
+    delayedRank === 1 ? "gold" :
+    delayedRank === 2 ? "silver" :
+    delayedRank === 3 ? "bronze" :
     "white";
 
   return (
