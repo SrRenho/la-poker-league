@@ -1,20 +1,14 @@
 import './styles.css';
-import { useEffect } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useTransform } from "framer-motion";
 import Hoverable from "./Hoverable";
+import { useAnimatedNumber } from "./useAnimatedNumber";
 
 export default function Global({ global = 0, color }) {
   const colorClass = color.toLowerCase();
 
-  const value = useMotionValue(global);
-  const spring = useSpring(value, { stiffness: 100, damping: 20 });
+  const formatting = (n) => `$${Math.abs(Math.round(n)).toLocaleString("de-DE")}`;
+  const formatted = useAnimatedNumber(global, formatting);
 
-  // Map the spring value to formatted string
-  const formatted = useTransform(spring, (v) => `$${Math.abs(Math.round(v)).toLocaleString("de-DE")}`);
-
-  useEffect(() => {
-    value.set(global);
-  }, [global]);
 
   return (
     <Hoverable className="white leaf-holder">
