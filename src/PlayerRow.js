@@ -25,7 +25,7 @@ export default function PlayerRow({
         <Amount amount={amount} color={color} absentStreak={absentStreak}/>
         <span/>
         <Global global={global} color={color}/>
-        <span className="cell"><Games games={games} color={color}/></span>
+        <span style={{marginLeft: "1rem"}}><Games games={games} color={color}/></span>
         <Ultimas ultimas={history} color={color}/>
     </div>
     );

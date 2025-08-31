@@ -8,7 +8,13 @@ function AppContent({ rows, metadata }) {
   if (!currentNight) return <div>Loading...</div>;
 
   return (
-    <div style={{ backgroundColor: "#201b1bff", minHeight: "100vh" }}>
+    <div style={{ 
+        backgroundColor: "var(--black)", 
+        minHeight: "100vh", 
+        display: "flex", 
+        flexDirection: "column", 
+        alignItems: "center" // centers children horizontally
+    }}>
         <Leaderboard night={currentNight} metadata={metadata} />
         <div style={{ marginTop: "1rem" }}>
             {hasPrev && <button onClick={goPrev}>Previous</button>}

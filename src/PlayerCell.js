@@ -15,7 +15,7 @@ export default function PlayerCell({ rankMovement, rank, name, color, animal }) 
             <RankMovement rankMovement={rankMovement} />
             <Rank rank={rank} />
         </span>
-        <span className ="leaf" style={{marginLeft: "1rem", width: "42.5%", backgroundImage: animalUrl, backgroundSize: "cover, 100% auto", backgroundRepeat: "no-repeat, no-repeat", backgroundPosition: 'center, left 45%',     backgroundBlendMode: 'multiply'}}/>
+        <span className ="leaf" style={{marginLeft: "1rem", width: "35%", backgroundImage: animalUrl, backgroundSize: "cover, 100% auto", backgroundRepeat: "no-repeat, no-repeat", backgroundPosition: 'center, left 45%',     backgroundBlendMode: 'multiply'}}/>
         <span style={{ marginLeft: 'auto', marginRight: "1rem" }}>{name}</span>
     </div>
     )

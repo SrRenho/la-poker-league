@@ -13,7 +13,7 @@ export default function Ultimas({ ultimas, color }) {
             backgroundColor: "var(--white)",
             color: `var(--${colorClass})`,
             display: "flex",
-            margin: "0 0.1rem",
+            margin: "0 0.25rem",
         }}
         key={i}>
             {u}
