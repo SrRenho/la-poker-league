@@ -101,18 +101,23 @@ body {
   padding: .25rem 1.2rem;
 }
 
+
 .leaderboard {
-    margin:  0 10rem;
-    padding-top: 10rem;
-  display: flex;
-  flex-direction: column;
-  gap: .75rem; /* spacing between rows */
-  
+  margin: 0 10rem;
+  padding-top: 10rem;
 }
 
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* spacing between PlayerRows */
+}
+
+
+/*
 .leaderboard .row:first-child {
   border-bottom: 1px solid var(--white); /* or whatever style you want */
-}
+/*}*/
 
 .row {
   display: grid;
