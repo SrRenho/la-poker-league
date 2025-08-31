@@ -1,6 +1,6 @@
 import "./styles.css"; 
 import Hoverable from "./Hoverable";
-
+import { motion, AnimatePresence } from "framer-motion";
 export default function Ultimas({ ultimas, color }) {
   const paddedUltimas = [...ultimas, ...Array(3 - ultimas.length).fill(null)].slice(0, Math.max(ultimas.length, 3));
   const colorClass = color.toLowerCase();
@@ -17,7 +17,18 @@ export default function Ultimas({ ultimas, color }) {
             margin: "0 0.25rem",
         }}
         key={i}>
-            {u}
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.span
+              key={u ?? i} // fallback for null
+              initial={{ y: "-.5rem", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: ".5rem", opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              style={{ display: "inline-block" }}
+            >
+              {u}
+            </motion.span>
+          </AnimatePresence>
         </span>
       ))}
     </Hoverable>
