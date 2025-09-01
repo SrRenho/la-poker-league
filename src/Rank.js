@@ -6,7 +6,7 @@ export default function Rank({ rank }) {
   const [delayedRank, setDelayedRank] = useState(rank);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setDelayedRank(rank), 1000); // 1s delay
+    const timeout = setTimeout(() => setDelayedRank(rank), 1500); // 1s delay
     return () => clearTimeout(timeout);
   }, [rank]);
 

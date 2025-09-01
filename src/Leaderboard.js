@@ -22,7 +22,7 @@ export default function Leaderboard({ night, metadata }) {
 
       <div className="rows">
         {players.map((r) => (
-          <motion.div key={r.player} layout>
+          <motion.div key={r.player} layout transition={{ layout: { type: "spring", stiffness: 50, damping: 20 } }}>
             <PlayerRow
               {...r}
               color={metadata.color[r.player]}
