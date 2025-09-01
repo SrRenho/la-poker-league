@@ -1,9 +1,12 @@
 import Leaderboard from "./Leaderboard";
 import { useNightNavigation } from "./useNightNavigation";
+import useArrowNavigation from "./useArrowNavigation";
 
 function AppContent({ rows, metadata }) {
   const nights = processNights(rows);
   const { currentNight, goNext, goPrev, hasNext, hasPrev } = useNightNavigation(nights);
+
+  useArrowNavigation({ goPrev, goNext, hasPrev, hasNext });
 
   if (!currentNight) return <div>Loading...</div>;
 
