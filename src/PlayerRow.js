@@ -23,7 +23,7 @@ export default function PlayerRow({
       <Hoverable className="row">
         <PlayerCell rankMovement={rankMovement} rank={rank} name={name} color={color} animal={animal}/>
         <Amount amount={amount} color={color} absentStreak={absentStreak}/>
-        <span/>
+        <span style={{width: "1rem"}}/>
         <Global global={global} color={color}/>
         <span style={{marginLeft: "1rem"}}><Games games={games} color={color}/></span>
         <Ultimas ultimas={history} color={color}/>

@@ -9,15 +9,15 @@ export default function Leaderboard({ night, metadata }) {
 
   return (
     <div className="leaderboard">
-      <div className="row header smaller">
-        <span />
-        <span style={{ fontStyle: "italic" }}>
+      <div className="row header smaller" style={{marginBottom: "1rem"}}>
+        <span className="player-cell"/>
+        <span style={{ fontStyle: "italic", width: "12rem"}}>
           Noche{" "}<AnimatedNight nightNumber={nightNumber}/>
-        </span>
-        <span />
-        <span>GLOBAL</span>
-        <span>GAMES</span>
-        <span>ÚLTIMAS</span>
+        </ span >
+        <span style={{width: "2rem"}}  />
+        <span style={{width: "12rem"}}>GLOBAL</span>
+        <span style={{width: "4rem", marginLeft: "1.75rem"}}>GAMES</span>
+        <span  style={{width: "10.5rem"}}>ÚLTIMAS</span>
       </div>
 
       <div className="rows">

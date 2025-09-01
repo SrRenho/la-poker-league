@@ -6,7 +6,7 @@ export default function Ultimas({ ultimas, color }) {
   const colorClass = color.toLowerCase();
 
   return (
-    <Hoverable className={`leaf ${colorClass}`}>
+    <Hoverable className={`leaf ${colorClass}`} style={{width: "8rem"}}>
       {paddedUltimas.map((u, i) => (
         <span
         className="circle no-italic"

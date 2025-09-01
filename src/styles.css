@@ -39,14 +39,14 @@ body {
 }
 
 .white  { background-color: var(--white); color: var(--black);}
-.gold   { background-color: var(--gold); border: 0.1rem solid var(--white); color: var(--white);}
-.silver { background-color: var(--silver); border: 0.1rem solid var(--black); color: var(--black);}
-.bronze { background-color: var(--bronze); border: 0.1rem solid var(--white); color: var(--white);}
+.gold   { background-color: var(--gold); outline: 0.1rem solid var(--white); color: var(--white);}
+.silver { background-color: var(--silver); outline: 0.1rem solid var(--black); color: var(--black);}
+.bronze { background-color: var(--bronze); outline: 0.1rem solid var(--white); color: var(--white);}
 .red    { background-color: var(--red); color: var(--white);}
 .evil-red { background-color: var(--evil-red); color: var(--white);}
 .maroon { background-color: var(--maroon); color: var(--white);}
 .blue   { background-color: var(--blue); color: var(--white);}
-.black  { background-color: var(--black); border: 0.1rem solid var(--white); color: var(--white);}
+.black  { background-color: var(--black); outline: 0.1rem solid var(--white); color: var(--white); }
 .brown  { background-color: var(--brown); color: var(--white);}
 .pink   { background-color: var(--pink); color: var(--white);}
 .purple { background-color: var(--purple); color: var(--white);}
@@ -121,11 +121,13 @@ body {
 
 .row {
   display: grid;
-  grid-template-columns: 6fr 2.75fr .5fr 2.75fr 1fr 1.8fr;
+  grid-template-columns: 6fr 2.75fr .5fr 2.75fr 1fr 1.8fr; 
   align-items: center;
   gap: 0.5rem;
   width: 60rem;
 }
+
+
 
 
 .cell {
@@ -139,7 +141,7 @@ body {
 
 .player-cell {
     max-height: 100%;
-    width: 100%;
+    width: 25rem;
   border-top-left-radius: 2rem 2rem;
   display: flex;
     align-items: center;    /* <-- vertical centering */
@@ -156,7 +158,7 @@ body {
 .leaf-holder {
   display: flex;
   justify-content: center;   /* center children horizontally */
-  width: 100%;               /* fill horizontal space */
+  width: 12rem;               /* fill horizontal space */
   padding: .35rem .35rem;           /* space between borders and children */
 }
 
