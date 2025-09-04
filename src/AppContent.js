@@ -8,21 +8,21 @@ function AppContent({ rows, metadata }) {
 
   useArrowNavigation({ goPrev, goNext, hasPrev, hasNext });
 
-  if (!currentNight) return <div>Loading...</div>;
-
   return (
-    <div style={{ 
-        backgroundColor: "var(--black)", 
-        minHeight: "100vh", 
-        display: "flex", 
-        flexDirection: "column", 
-        alignItems: "center" // centers children horizontally
-    }}>
-        <Leaderboard night={currentNight} metadata={metadata} />
-        <div style={{ marginTop: "1rem" }}>
-            {hasPrev && <button onClick={goPrev}>Previous</button>}
-            {hasNext && <button onClick={goNext} style={{ marginLeft: "1rem" }}>Next</button>}
-        </div>
+    <div
+      style={{
+        backgroundColor: "var(--black)",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <Leaderboard night={currentNight} metadata={metadata} />
+      <div style={{ marginTop: "1rem" }}>
+        {hasPrev && <button onClick={goPrev}>Previous</button>}
+        {hasNext && <button onClick={goNext} style={{ marginLeft: "1rem" }}>Next</button>}
+      </div>
     </div>
   );
 }

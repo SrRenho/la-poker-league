@@ -1,7 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function useNightNavigation(nights) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(nights.length >= 2 ? nights.length - 2 : 0);
+
+  useEffect(() => {
+    if (nights.length >= 2 && currentIndex === nights.length - 2) {
+      // Wait 3 seconds for dramatic effect, then go to the last night
+      const timer = setTimeout(() => {
+        setCurrentIndex(currentIndex + 1); // Equivalent to goNext
+      }, 3000); // 3-second delay
+
+      // Cleanup timer on unmount or if nights changes
+      return () => clearTimeout(timer);
+    }
+  }, [nights, currentIndex]); // Run when nights or currentIndex changes
 
   const currentNight = nights[currentIndex] || null;
 
