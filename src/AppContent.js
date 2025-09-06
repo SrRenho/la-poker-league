@@ -19,7 +19,7 @@ function AppContent({ rows, metadata }) {
         alignItems: "center",
       }}
     >
-                                    
+      <TextureOverlay/>
       <Leaderboard night={currentNight} metadata={metadata} />
       <div style={{ marginTop: "1rem" }}>
         {hasPrev && <button onClick={goPrev}>Previous</button>}
