@@ -1,6 +1,7 @@
 import Leaderboard from "./Leaderboard";
 import { useNightNavigation } from "./useNightNavigation";
 import useArrowNavigation from "./useArrowNavigation";
+import TextureOverlay from "./TextureOverlay";
 
 function AppContent({ rows, metadata }) {
   const nights = processNights(rows);
@@ -18,6 +19,7 @@ function AppContent({ rows, metadata }) {
         alignItems: "center",
       }}
     >
+                                    
       <Leaderboard night={currentNight} metadata={metadata} />
       <div style={{ marginTop: "1rem" }}>
         {hasPrev && <button onClick={goPrev}>Previous</button>}

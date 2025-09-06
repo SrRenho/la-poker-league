@@ -8,7 +8,7 @@ export function useNightNavigation(nights) {
       // Wait 3 seconds for dramatic effect, then go to the last night
       const timer = setTimeout(() => {
         setCurrentIndex(currentIndex + 1); // Equivalent to goNext
-      }, 3000); // 3-second delay
+      }, 2500); // 3-second delay
 
       // Cleanup timer on unmount or if nights changes
       return () => clearTimeout(timer);
