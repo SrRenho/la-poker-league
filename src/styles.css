@@ -113,12 +113,6 @@ body {
   gap: 0.75rem; /* spacing between PlayerRows */
 }
 
-
-/*
-.leaderboard .row:first-child {
-  border-bottom: 1px solid var(--white); /* or whatever style you want */
-/*}*/
-
 .row {
   display: grid;
   grid-template-columns: 6fr 2.75fr .5fr 2.75fr 1fr 1.8fr; 
@@ -178,4 +172,44 @@ body {
 
 .money{
     margin-right: .8rem;
+}
+
+.grid-wrapper {
+  position: relative; /* allows absolute positioning inside */
+}
+
+.submatrix1-border {
+  position: absolute;
+  pointer-events: none;
+  top: 11.75rem;                /* matches .leaderboard padding-top so border sits on the content area */
+  left: 11.75rem;               /* matches .leaderboard horizontal margin-left */
+  width: 37.5rem;            /* covers first two columns (see explanation below) */
+  bottom: 2rem;                 /* span to the bottom of the leaderboard area */
+  box-sizing: border-box;
+  border-top: 1px solid var(--white);
+  border-right: 1px solid var(--white);
+  border-left: none;
+  border-bottom: none;
+  border-top-right-radius: .5rem; /* only this corner is rounded */
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.submatrix2-border {
+  position: absolute;
+  pointer-events: none;
+  top: 11.75rem;                /* matches .leaderboard padding-top so border sits on the content area */
+  left: calc(37.5rem + 14rem);               /* matches .leaderboard horizontal margin-left */
+  width: 28.5rem;            /* covers first two columns (see explanation below) */
+  bottom: 2rem;                 /* span to the bottom of the leaderboard area */
+  box-sizing: border-box;
+  border-top: 1px solid var(--white);
+  border-right: 1px solid var(--white);
+  border-left: none;
+  border-bottom: none;
+  border-top-right-radius: .5rem; /* only this corner is rounded */
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
