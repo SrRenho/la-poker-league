@@ -41,7 +41,20 @@ export default function TextureOverlay() {
       }}
     />
 
-
+    <div
+      style={{
+        position: "fixed",
+        inset: 0,
+        backgroundImage: "url('/bg-logo.png')",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        pointerEvents: "none",
+        zIndex: 0,
+        opacity: 0.5,
+        backgroundPositionX: "60vw",
+        backgroundSize: "35vw"
+      }}
+    />
   </>  
   );
 }
