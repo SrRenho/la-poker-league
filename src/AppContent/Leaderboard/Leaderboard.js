@@ -8,8 +8,8 @@ export default function Leaderboard({ night, metadata }) {
 
   return (
     <div className="grid-wrapper">
-      <div className="submatrix1-border" />
-      <div className="submatrix2-border" />
+      <div className="submatrix-border submatrix1-border" />
+      <div className="submatrix-border submatrix2-border" />
       <div className="leaderboard">
         <Header nightNumber={night.number}/>
 
