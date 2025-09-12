@@ -1,5 +1,4 @@
-import "./styles.css"; 
-import Hoverable from "../Hoverable";
+import Hoverable from "Hoverable";
 
 export default function Games({ games, color }) {
   games = games || 0;

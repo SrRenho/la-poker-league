@@ -1,0 +1,21 @@
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  font-weight: bold;
+  line-height: .6rem;
+}
+
+.leaf {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  border-top-left-radius: 1rem 1rem;
+  border-bottom-right-radius: 1rem 1rem;
+  padding: 0.25rem 0.5rem;
+  height: 2.8rem;
+}

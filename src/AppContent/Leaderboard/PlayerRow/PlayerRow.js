@@ -1,10 +1,11 @@
-import "./styles.css";
-import Hoverable from "../Hoverable";
-import Games from "./Games";
-import Amount from "../Amount";
-import Global from "./Global";
-import PlayerCell from "./PlayerCell";
-import Ultimas from "./Ultimas";
+import Hoverable from "Hoverable";
+import Games from "./Games/Games";
+import Amount from "./Amount/Amount";
+import Global from "./Global/Global";
+import PlayerCell from "./PlayerCell/PlayerCell";
+import Ultimas from "./Ultimas/Ultimas";
+
+import './PlayerRow.css';
 
 export default function PlayerRow({
   rankMovement,

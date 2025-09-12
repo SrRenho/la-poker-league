@@ -1,8 +1,7 @@
-import './styles.css';
-import Hoverable from './Hoverable';
-import { useAnimatedNumber } from './AppContent/useAnimatedNumber';
-
 import { motion, AnimatePresence } from "framer-motion";
+import Hoverable from 'Hoverable';
+import { useAnimatedNumber } from 'hooks/useAnimatedNumber';
+import '../PlayerRow.css';
 
 
 export default function Amount({ amount, color, absentStreak }) {

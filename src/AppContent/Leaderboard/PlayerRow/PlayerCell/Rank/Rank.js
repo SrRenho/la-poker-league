@@ -1,6 +1,6 @@
-import "./styles.css";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import './Rank.css';
 
 export default function Rank({ rank }) {
   const [delayedRank, setDelayedRank] = useState(rank);

@@ -1,6 +1,9 @@
-
+import useArrowNavigation from "./useArrowNavigation";
 
 export default function NavigationButtons({goPrev, goNext, hasPrev, hasNext}){
+
+    useArrowNavigation({ goPrev, goNext, hasPrev, hasNext });
+
 
     return (
                 <div style={{ marginTop: "1rem", display: "flex", justifyContent: "center" }}>

@@ -1,0 +1,31 @@
+:root {
+    --white: #eeefdf;
+    --gold: #ffaa00;
+    --silver: #d0e4ea;
+    --bronze: #d15d2f;
+    --red: #d12f2f;
+    --evil-red: #ff2e3a;
+    --maroon: #6d1b34;
+    --blue: #1e67d3;
+    --black: #191919;
+    --brown: #a56028;
+    --pink: #f275da;
+    --purple: #700fbc;
+    --green: #2fb264;
+    --yellow: var(--gold);
+}
+
+.white  { background-color: var(--white); color: var(--black);}
+.gold   { background-color: var(--gold); outline: 0.1rem solid var(--white); color: var(--white);}
+.silver { background-color: var(--silver); outline: 0.1rem solid var(--black); color: var(--black);}
+.bronze { background-color: var(--bronze); outline: 0.1rem solid var(--white); color: var(--white);}
+.red    { background-color: var(--red); color: var(--white);}
+.evil-red { background-color: var(--evil-red); color: var(--white);}
+.maroon { background-color: var(--maroon); color: var(--white);}
+.blue   { background-color: var(--blue); color: var(--white);}
+.black  { background-color: var(--black); outline: 0.1rem solid var(--white); color: var(--white); }
+.brown  { background-color: var(--brown); color: var(--white);}
+.pink   { background-color: var(--pink); color: var(--white);}
+.purple { background-color: var(--purple); color: var(--white);}
+.green  { background-color: var(--green); color: var(--white);}
+.yellow   { background-color: var(--yellow); color: var(--white);}

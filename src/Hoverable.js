@@ -1,4 +1,4 @@
-import { useHover } from "./useHover";
+import { useHover } from "./hooks/useHover";
 
 export default function Hoverable({ children, scale = 1.05, pointer = true, style, ...rest }) {
   const [ref, isHovered] = useHover();

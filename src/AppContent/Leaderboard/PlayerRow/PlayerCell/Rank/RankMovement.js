@@ -1,6 +1,6 @@
-import './styles.css';
-import Hoverable from '../Hoverable';
+import Hoverable from 'Hoverable';
 import { useState, useEffect } from 'react';
+import './Rank.css';
 
 export default function RankMovement({ rankMovement }) {
   if (rankMovement === 0) {

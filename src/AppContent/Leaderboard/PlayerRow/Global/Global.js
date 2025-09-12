@@ -1,7 +1,7 @@
-import './styles.css';
-import { motion, useTransform } from "framer-motion";
-import Hoverable from "../Hoverable";
-import { useAnimatedNumber } from "./useAnimatedNumber";
+import { motion } from "framer-motion";
+import { useAnimatedNumber } from "hooks/useAnimatedNumber";
+import Hoverable from "Hoverable";
+import '../PlayerRow.css';
 
 export default function Global({ global = 0, color }) {
   const colorClass = color.toLowerCase();

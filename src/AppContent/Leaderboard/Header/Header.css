@@ -1,0 +1,9 @@
+.header {
+  font-weight: normal;
+  font-style: normal;
+  color: var(--white);
+  text-align: center;
+
+  align-items: flex-end;   /* push content to bottom */
+  padding-bottom: 0.1rem; /* slight spacing from bottom */
+}

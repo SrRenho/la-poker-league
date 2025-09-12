@@ -1,31 +1,27 @@
-import Leaderboard from "./Leaderboard";
+import Leaderboard from "./Leaderboard/Leaderboard";
 import { useNightNavigation } from "./useNightNavigation";
-import useArrowNavigation from "./useArrowNavigation";
 import TextureOverlay from "./TextureOverlay";
 import { useEffect, useRef } from "react";
 import Logo from "./Logo";
 import NavigationButtons from "./NavigationButtons";
+
 function AppContent({ rows, metadata }) {
   const nights = processNights(rows);
   const { currentNight, goNext, goPrev, hasNext, hasPrev } = useNightNavigation(nights);
-
-  useArrowNavigation({ goPrev, goNext, hasPrev, hasNext });
-
 
   // keep latest goNext in a ref to avoid deps lint warnings
   const goNextRef = useRef(goNext);
   useEffect(() => { goNextRef.current = goNext; }, [goNext]);
 
-  // run once on mount: if we can goNext initially, wait a couple seconds then advance
   useEffect(() => {
     if (!hasNext) return; // only trigger if there's a next at initial load
     const id = setTimeout(() => {
       // call the latest goNext
       goNextRef.current();
-    }, 2000); // 2000 ms = 2 seconds
+    }, 2000);
 
     return () => clearTimeout(id);
-  }, []); // empty deps -> runs once per page load (mount)
+  }, []);
 
   return (
     <div
