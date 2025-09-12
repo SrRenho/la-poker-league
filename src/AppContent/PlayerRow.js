@@ -1,7 +1,7 @@
 import "./styles.css";
-import Hoverable from "./Hoverable";
+import Hoverable from "../Hoverable";
 import Games from "./Games";
-import Amount from "./Amount";
+import Amount from "../Amount";
 import Global from "./Global";
 import PlayerCell from "./PlayerCell";
 import Ultimas from "./Ultimas";

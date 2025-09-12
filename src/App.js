@@ -1,5 +1,5 @@
 import useGoogleSheet from "./useGoogleSheet";
-import AppContent from "./AppContent";
+import AppContent from "./AppContent/AppContent";
 
 function App() {
   const { rows, metadata } = useGoogleSheet();

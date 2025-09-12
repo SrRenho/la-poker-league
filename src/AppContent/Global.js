@@ -1,6 +1,6 @@
 import './styles.css';
 import { motion, useTransform } from "framer-motion";
-import Hoverable from "./Hoverable";
+import Hoverable from "../Hoverable";
 import { useAnimatedNumber } from "./useAnimatedNumber";
 
 export default function Global({ global = 0, color }) {

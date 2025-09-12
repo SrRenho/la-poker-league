@@ -53,6 +53,18 @@ body {
 .green  { background-color: var(--green); color: var(--white);}
 .yellow   { background-color: var(--yellow); color: var(--white);}
 
+.logo1 {
+  font-size: 5rem;
+  color: var(--evil-red);
+  line-height: 0.8;
+}
+
+.logo2 {
+  font-size: 6.5rem;
+  color: var(--white);
+  line-height: 0.8;
+}
+
 .circle {
     
   display: flex;
@@ -104,7 +116,6 @@ body {
 
 .leaderboard {
   margin: 0 10rem;
-  padding-top: 10rem;
 }
 
 .rows {
@@ -181,7 +192,7 @@ body {
 .submatrix1-border {
   position: absolute;
   pointer-events: none;
-  top: 11.75rem;                /* matches .leaderboard padding-top so border sits on the content area */
+  top: 1.75rem;                /* matches .leaderboard padding-top so border sits on the content area */
   left: 11.75rem;               /* matches .leaderboard horizontal margin-left */
   width: 37.5rem;            /* covers first two columns (see explanation below) */
   bottom: 2rem;                 /* span to the bottom of the leaderboard area */
@@ -199,7 +210,7 @@ body {
 .submatrix2-border {
   position: absolute;
   pointer-events: none;
-  top: 11.75rem;                /* matches .leaderboard padding-top so border sits on the content area */
+  top: 1.75rem;                /* matches .leaderboard padding-top so border sits on the content area */
   left: calc(37.5rem + 14rem);               /* matches .leaderboard horizontal margin-left */
   width: 28.5rem;            /* covers first two columns (see explanation below) */
   bottom: 2rem;                 /* span to the bottom of the leaderboard area */

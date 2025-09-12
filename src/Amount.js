@@ -1,6 +1,6 @@
 import './styles.css';
 import Hoverable from './Hoverable';
-import { useAnimatedNumber } from './useAnimatedNumber';
+import { useAnimatedNumber } from './AppContent/useAnimatedNumber';
 
 import { motion, AnimatePresence } from "framer-motion";
 

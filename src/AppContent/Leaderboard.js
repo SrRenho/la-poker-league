@@ -1,6 +1,6 @@
 import PlayerRow from "./PlayerRow";
 import "./styles.css";
-import AnimatedNight from "./AnimatedNight.js";
+import AnimatedNight from "../AnimatedNight.js";
 import { motion } from "framer-motion";
 
 export default function Leaderboard({ night, metadata }) {

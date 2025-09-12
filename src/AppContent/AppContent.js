@@ -3,7 +3,8 @@ import { useNightNavigation } from "./useNightNavigation";
 import useArrowNavigation from "./useArrowNavigation";
 import TextureOverlay from "./TextureOverlay";
 import { useEffect, useRef } from "react";
-
+import Logo from "./Logo";
+import NavigationButtons from "./NavigationButtons";
 function AppContent({ rows, metadata }) {
   const nights = processNights(rows);
   const { currentNight, goNext, goPrev, hasNext, hasPrev } = useNightNavigation(nights);
@@ -37,11 +38,11 @@ function AppContent({ rows, metadata }) {
       }}
     >
       <TextureOverlay/>
-      <Leaderboard night={currentNight} metadata={metadata} />
-      <div style={{ marginTop: "1rem" }}>
-        {hasPrev && <button onClick={goPrev}>Previous</button>}
-        {hasNext && <button onClick={goNext} style={{ marginLeft: "1rem" }}>Next</button>}
+      <div style={{ paddingTop: "5rem", alignSelf: "flex-start",   margin: "-1rem 30rem"}} >
+        <Logo/>
       </div>
+      <Leaderboard night={currentNight} metadata={metadata} />
+      <NavigationButtons goPrev= {goPrev} goNext={goNext} hasPrev={hasPrev} hasNext={hasNext}/>
     </div>
   );
 }

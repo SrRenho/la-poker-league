@@ -1,5 +1,5 @@
 import "./styles.css"; 
-import Hoverable from "./Hoverable";
+import Hoverable from "../Hoverable";
 import { motion, AnimatePresence } from "framer-motion";
 export default function Ultimas({ ultimas, color }) {
   const paddedUltimas = [...ultimas, ...Array(3 - ultimas.length).fill(null)].slice(0, Math.max(ultimas.length, 3));

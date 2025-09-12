@@ -1,5 +1,5 @@
 import './styles.css';
-import Hoverable from './Hoverable';
+import Hoverable from '../Hoverable';
 import { useState, useEffect } from 'react';
 
 export default function RankMovement({ rankMovement }) {

@@ -1,7 +1,7 @@
 import RankMovement from "./RankMovement";
 import Rank from "./Rank";
 import './styles.css';
-import Hoverable from "./Hoverable";
+import Hoverable from "../Hoverable";
 
 export default function PlayerCell({ rankMovement, rank, name, color, animal }) {
     const colorClass = color.toLowerCase();
